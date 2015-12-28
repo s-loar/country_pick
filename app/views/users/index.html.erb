@@ -1,0 +1,26 @@
+<div class='row'>
+  <div class='col-md-12'>
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+    <div class='form-group'>
+      <div class='control-label col-md-2'>
+        <%= f.label :country_code, "Country" %>
+      </div>
+      <div class='col-md-10'>
+          <%# f.country_select :country_code, priority: %w(US CA), prompt: 'Please select a country' %>
+          <%= f.country_select :country_code, { prompt: 'Please select a country' }, { class: 'form-control' } %>
+      </div>
+    </div>
+
+      <div class='form-group'>
+        <div class='control-label col-md-2'>
+          <%= f.label :state_code, "State/Province" %>
+        </div>
+        <div class='col-md-10'>
+          <%= render partial: 'subregion_select', locals: {parent_region: f.object.country_code} %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>

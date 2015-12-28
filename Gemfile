@@ -32,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Styling of our page
+gem 'bootstrap-sass', '~>3.3.4.1'
+
 # our country/state picks on user signup page
 gem 'carmen-rails', '~> 1.0', '>= 1.0.1'
 

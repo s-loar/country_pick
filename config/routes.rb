@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#new'
+  root 'users#index'
 
   get '/users/subregion_options' => 'users#subregion_options'
   resources :users
