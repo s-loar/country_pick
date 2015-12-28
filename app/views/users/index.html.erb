@@ -7,8 +7,7 @@
         <%= f.label :country_code, "Country" %>
       </div>
       <div class='col-md-10'>
-          <%# f.country_select :country_code, priority: %w(US CA), prompt: 'Please select a country' %>
-          <%= f.country_select :country_code, { prompt: 'Please select a country' }, { class: 'form-control' } %>
+          <%= f.country_select :country_code, {priority: %w(US CA), prompt: 'Please select a country'}, { class: 'form-control' } %>
       </div>
     </div>
 
