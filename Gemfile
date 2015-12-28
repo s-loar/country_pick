@@ -32,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# our country/state picks on user signup page
+gem 'carmen-rails', '~> 1.0', '>= 1.0.1'
+
 group :development, :test do
   gem 'rspec-rails', '3.2.3'
   gem 'guard-rspec', require: false
