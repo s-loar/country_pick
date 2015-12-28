@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'users#new'
+
+  get '/users/subregion_options' => 'users#subregion_options'
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
