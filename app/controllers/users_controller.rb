@@ -4,11 +4,9 @@ class UsersController < ApplicationController
 
   def index
     @user = User.new
-    # @user.country_code = 'US'
   end
 
   def subregion_options
-    # binding.pry
     render partial: 'subregion_select'
   end
 
